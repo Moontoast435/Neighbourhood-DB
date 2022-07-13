@@ -75,3 +75,4 @@ CLIENT ERROR RESPONSES:
 SUCCESSFUL RESPONSES:
 
 201: A successful put or patch request when a user updates an address
+
