@@ -14,39 +14,8 @@ Maturity wise SQL databases are built on mature technologies that are well known
 
 As SQL database requires a predefined schema that determines how tables are configured and data is stored, resulting in a rigid structure that helps to optimize storage and ensure data integrity, but limits flexibility.
 
-Database Creation
-Firstly Install the latest version of Docker and then within a terminal input:
-docker run --name <new-container-name> --mount type=bind,source="$(pwd)",dst=<destination> -e POSTGRES_PASSWORD=<a-password> -d postgres
-This creates a container with volume at location <destination>
-Then attach a your container to a bash terminal with the following command:
-docker exec -it <container-name> /bin/bash
-Then create your new neighbourhood database within your container with:
-createdb neighbourhooddb -U postgres
-Access your database shell with:
-psql neighbourhooddb -U postgres
-To create your people table use:
-CREATE TABLE people (
-	personalId serial PRIMARY KEY,
-	name VARCHAR ( 50 ) NOT NULL,
-	age INT,
-	numInHouse INT,
-);
-Then create household table using:
-CREATE TABLE household (
-	householdId serial PRIMARY KEY,
-	addressId INT
-	owner VARCHAR (50) NOT NULL
-	personalId INT
-);
-Then create an address table using:
-CREATE TABLE address (
-	addressId INT,
-	postcode VARCHAR NOTNULL,
-	streetAddress VARCHAR NOTNULL
-);
-To create a data entry use:
-INSERT INTO people (name, age, numInHouse)
-VALUES ('Jake', 19, 4), ('Cole', 31, 3), (Jared, 5, 2);
+![image](https://user-images.githubusercontent.com/95479796/178716208-00116500-33ef-47be-a973-8fac001fc656.png)
+
 API endpoints
 1.       /houses
 2.       /houses/address/
