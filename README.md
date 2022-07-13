@@ -29,7 +29,9 @@ Then we could update the address or postcode with Patch/Put methods if informati
 DESTROY restful request ( using the ‘DELETE’ HTTP verb) which can remove certain addresses.
  
 3.       The SHOW request can be used to display all of the information on people (name, age , number of people in their household, houseid).
-Then a CREATE request (using POST) can then add to these properties. If the number of people in the household changes, that number will need to be updated with ‘PATCH’ or ‘PUT’, and then the new person will need to be added with ‘POST’.
+Then a CREATE request (using POST) can then add to these properties. If the number of people in the household changes, that number will need to be updated with ‘PATCH’ or ‘PUT’, and then the new person will need to be added with ‘POST’. Then a 'get' method on the /people endpoint could be used along with a search query:
+
+SELECT people FROM neighbourhood WHERE age > 7;
 
 
 STATUS CODES
